@@ -559,7 +559,7 @@
                     await PromiseUtil.sleep(5000);
                     const { webCertFile, webKeyFile, webDomain: host, webPort: port, webBasePath: base } = this.allSetting;
                     const isTLS = webCertFile !== "" || webKeyFile !== "";
-                    const url = buildURL({ host, port, isTLS, base, path: "panel/settings" });
+                    const url = buildURL({ host, 80, isTLS, base, path: "panel/settings" });
                     window.location.replace(url);
                 }
             },
